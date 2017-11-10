@@ -69,11 +69,17 @@
 
     <article class="container">
       <h3>Registratieformulier</h3>
-        <form>
+        <form action="./formdata.php" method="post">
           <div class="form-group row">
             <label for="input_voornaam" class="col-sm-2 col-form-label">Voornaam</label>
             <div class="col-sm-10">
               <input type="text" class="form-control" id="input_voornaam" placeholder="vul in voornaam">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="input_tussenvoegsel" class="col-sm-2 col-form-label">Tussenvoegsel</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="input_voornaam" placeholder="vul in tussenvoegsel">
             </div>
           </div>
           <div class="form-group row">
