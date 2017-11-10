@@ -63,9 +63,30 @@
       echo "<p>Over tien jaar ben ik: " . ($user["leeftijd"] + 10) . "</p>";
 
       // var_dump($user);
-
-  
     ?>
+
+    <hr>
+
+    <article class="container">
+      <h3>Registratieformulier</h3>
+        <form>
+          <div class="form-group row">
+            <label for="input_voornaam" class="col-sm-2 col-form-label">Voornaam</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="input_voornaam" placeholder="vul in voornaam">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <button type="submit" class="btn btn-primary">Verstuur!</button>
+            </div>
+          </div>
+        </form>
+    </article>
+
+    
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
