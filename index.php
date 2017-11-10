@@ -35,7 +35,7 @@
       echo "<p>Over 10 jaar ben ik: " . ($leeftijd + 10) . "</p>";
       echo "<p>Mijn top 3 van fruit is: " . $fruit0 . ", " . $fruit1 . ", " . $fruit2;
 
-      
+  
     ?>
 
     <!-- Optional JavaScript -->
