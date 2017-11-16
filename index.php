@@ -73,13 +73,25 @@
           <div class="form-group row">
             <label for="input_voornaam" class="col-sm-2 col-form-label">Voornaam</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="input_voornaam" placeholder="vul in voornaam">
+              <input type="text" name="voornaam" class="form-control" id="input_voornaam" placeholder="vul in voornaam">
             </div>
           </div>
           <div class="form-group row">
             <label for="input_tussenvoegsel" class="col-sm-2 col-form-label">Tussenvoegsel</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="input_voornaam" placeholder="vul in tussenvoegsel">
+              <input type="text" name="tussenvoegsel" class="form-control" id="input_tussenvoegsel" placeholder="vul in tussenvoegsel">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="input_achternaam" class="col-sm-2 col-form-label">Achternaam</label>
+            <div class="col-sm-10">
+              <input type="text" name="achternaam" class="form-control" id="input_achternaam" placeholder="vul in achternaam">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="input_password" class="col-sm-2 col-form-label">Wachtwoord</label>
+            <div class="col-sm-10">
+              <input type="password" name="password" class="form-control" id="input_password">
             </div>
           </div>
           <div class="form-group row">
