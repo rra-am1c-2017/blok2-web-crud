@@ -9,63 +9,58 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   </head>
-  <body>
-
-    
-    
+  <body>    
     <?php
-      // Met echo schrijf je 
-      // iets naar het scherm 
-      // met php
-      echo "<h3>Javascript, CSS en HTML5 werkt nog!</h3>";
+      // // Met echo schrijf je        
+      // // iets naar het scherm 
+      // // met php
+      // echo "<h3>Javascript, CSS en HTML5 werkt nog!</h3>";
 
-      /* 
-         Je kunt een variabele maken 
-         in php door $-teken te gebruiken
-      */
+      // /* 
+      //    Je kunt een variabele maken 
+      //    in php door $-teken te gebruiken
+      // */
 
-      # Met een hekje kun je ook een regel uitcommentarieren.
-      $voornaam = "Arjan";
-      $tussenvoegsel = "de";
-      $achternaam = "Ruijter";
-      $haarkleur = "grijs";
-      $schoenmaat = "45";
-      $leeftijd = 49;
+      // # Met een hekje kun je ook een regel uitcommentarieren.
+      // $voornaam = "Arjan";
+      // $tussenvoegsel = "de";
+      // $achternaam = "Ruijter";
+      // $haarkleur = "grijs";
+      // $schoenmaat = "45";
+      // $leeftijd = 49;
 
-      // We gaan voor al het fruit een nieuw datatype maken het array
-      $fruit = array("Peer", "Banaan", "Appel", "Sinaasappel", "Mango");
+      // // We gaan voor al het fruit een nieuw datatype maken het array
+      // $fruit = array("Peer", "Banaan", "Appel", "Sinaasappel", "Mango");
 
-      // var_dump($fruit);
+      // // var_dump($fruit);
 
-      // Dit is een indexed array
+      // // Dit is een indexed array
 
-      echo "<p>Mijn voornaam is: " . $voornaam . " " . $tussenvoegsel . " " . $achternaam . "</p>";
-      echo "<p>Mijn haarkleur is: " . $haarkleur . "</p>";
-      echo "<p>Mijn schoenmaat is: " . $schoenmaat . "</p>";
-      echo "<p>Mijn leeftijd is: " . $leeftijd  . "</p>";
-      echo "<p>Over 10 jaar ben ik: " . ($leeftijd + 10) . "</p>";
-      echo "<p>Mijn top 4 van fruit is: " . $fruit[2] . ", " . $fruit[3] . ", " . $fruit[4] . ", " . $fruit[0] . ", " . $fruit[1] . "<br>";
+      // echo "<p>Mijn voornaam is: " . $voornaam . " " . $tussenvoegsel . " " . $achternaam . "</p>";
+      // echo "<p>Mijn haarkleur is: " . $haarkleur . "</p>";
+      // echo "<p>Mijn schoenmaat is: " . $schoenmaat . "</p>";
+      // echo "<p>Mijn leeftijd is: " . $leeftijd  . "</p>";
+      // echo "<p>Over 10 jaar ben ik: " . ($leeftijd + 10) . "</p>";
+      // echo "<p>Mijn top 4 van fruit is: " . $fruit[2] . ", " . $fruit[3] . ", " . $fruit[4] . ", " . $fruit[0] . ", " . $fruit[1] . "<br>";
 
-      // Maak een array met je voornaam, tussenvoegsel, achternaam, leeftijd, haarkleur.Echo deze zin naar het scherm.
+      // // Maak een array met je voornaam, tussenvoegsel, achternaam, leeftijd, haarkleur.Echo deze zin naar het scherm.
       
-      // Dit is een associatiefarray
-      $user = array("voornaam"      => "Arjan", 
-                    "tussenvoegsel" => "de",
-                    "achternaam"    => "Ruijter",
-                    "leeftijd"      => 49,
-                    "haarkleur"     => "grijs",
-                    "schoenmaat"    =>  "45");
+      // // Dit is een associatiefarray
+      // $user = array("voornaam"      => "Arjan", 
+      //               "tussenvoegsel" => "de",
+      //               "achternaam"    => "Ruijter",
+      //               "leeftijd"      => 49,
+      //               "haarkleur"     => "grijs",
+      //               "schoenmaat"    =>  "45");
 
-      echo "<p>Mijn naam is: " . $user["voornaam"] . " " . $user["tussenvoegsel"] . " " . $user["achternaam"] . "</p>";
+      // echo "<p>Mijn naam is: " . $user["voornaam"] . " " . $user["tussenvoegsel"] . " " . $user["achternaam"] . "</p>";
 
-      echo "<p>Mijn leeftijd, haarkleur en schoenmaat zijn: " . $user["leeftijd"] . ", " . $user["haarkleur"] . ", " . $user["schoenmaat"] . "</p>";
+      // echo "<p>Mijn leeftijd, haarkleur en schoenmaat zijn: " . $user["leeftijd"] . ", " . $user["haarkleur"] . ", " . $user["schoenmaat"] . "</p>";
 
-      echo "<p>Over tien jaar ben ik: " . ($user["leeftijd"] + 10) . "</p>";
+      // echo "<p>Over tien jaar ben ik: " . ($user["leeftijd"] + 10) . "</p>";
 
-      // var_dump($user);
+      // // var_dump($user);
     ?>
-
-    <hr>
 
     <article class="container">
       <h3>Registratieformulier</h3>
@@ -106,6 +101,41 @@
             </div>
           </div>
         </form>
+
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>voornaam</th>
+              <th>tussenvoegsel</th>
+              <th>achternaam</th>
+              <th>leeftijd</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Arjan</td>
+              <td>de</td>
+              <td>Ruijter</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Bert</td>
+              <td>de</td>
+              <td>Vries</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Johan</td>
+              <td>de</td>
+              <td>Beer</td>
+              <td>112</td>
+            </tr>
+          </tbody>
+        </table>
     </article>
 
     

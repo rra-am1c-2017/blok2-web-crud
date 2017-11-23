@@ -1,10 +1,10 @@
 <?php
   /* echo "Dit is de pagina formdata.php";
-  var_dump($_POST);
-  //echo "Mijn naam is: {$_POST["voornaam"]} {$_POST["tussenvoegsel"]} {$_POST["achternaam"]}";
-  echo "<p>Mijn naam is: " . $_POST["voornaam"] . " " . $_POST["tussenvoegsel"]. " " . $_POST["achternaam"] . "</p>";
-  //echo "Mijn wachtwoord is: {$_POST["password"]}";
-  echo "<p>Mijn wachtwoord is: " . $_POST["password"] . "</p>";
+     var_dump($_POST);
+     //echo "Mijn naam is: {$_POST["voornaam"]} {$_POST["tussenvoegsel"]} {$_POST["achternaam"]}";
+     echo "<p>Mijn naam is: " . $_POST["voornaam"] . " " . $_POST["tussenvoegsel"]. " " . $_POST["achternaam"] . "</p>";
+     //echo "Mijn wachtwoord is: {$_POST["password"]}";
+     echo "<p>Mijn wachtwoord is: " . $_POST["password"] . "</p>";
  */
   // De logingegevens voor de mysql-database
   $server_name = "localhost";
@@ -45,17 +45,17 @@
       - IBAN
 
 
-      */
+  */
   
   mysqli_query($conn, $sql);
   
-  echo "Gefeliciteerd, de gegevens zijn weggeschreven naar de database-tabel!";
+  echo "<h1>Gefeliciteerd, de gegevens zijn weggeschreven naar de database-tabel!</h1>";
   // Wil je direct doorgestuurd worden naar de index.php pagina dan gebruik je... 
   //header("Location: ./index.php");
 
   // Wil je doorgestuurd worden naar index.php maar toch een aantal seconden op de
   // pagina blijven dan gebruik je... 
-  header("Refresh: 10; url=./index.php");
+  header("Refresh: 2; url=./index.php");
  
   
 ?>
