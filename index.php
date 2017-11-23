@@ -79,8 +79,7 @@
       // We vuren de query af op de mysql-database via de verbinding $conn
       $result = mysqli_query($conn, $sql);
 
-      // We laten PHP het onleesbare $result object omzetten naar een zeer leesbaar associatief array
-        
+      // We laten PHP het onleesbare $result object omzetten naar een zeer leesbaar associatief array        
       $table_data = "";
       while ($record = mysqli_fetch_assoc($result)) {
         $table_data = $table_data . "<tr>
@@ -89,12 +88,10 @@
                                         <td>" . $record["tussenvoegsel"]  . "</td>
                                      </tr>";
       }
-
-
-
-
-
     ?>
+    
+    
+
 
     <article class="container">
       <h3>Registratieformulier</h3>
