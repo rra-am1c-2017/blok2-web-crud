@@ -9,7 +9,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   </head>
-  <body>    
+  <body> 
+    <!-- Hieronder staat php-code die we niet meer gebruiken -->
     <?php
       // // Met echo schrijf je        
       // // iets naar het scherm 
@@ -60,6 +61,39 @@
       // echo "<p>Over tien jaar ben ik: " . ($user["leeftijd"] + 10) . "</p>";
 
       // // var_dump($user);
+    ?>
+
+    <?php
+      // De logingegevens voor de mysql-database
+      $server_name = "localhost";
+      $user_name = "root";
+      $password = "";
+      $database_name = "am1c_2017_blok2_crud";
+
+      // We maken contact met de mysql-server
+      $conn = mysqli_connect($server_name, $user_name, $password, $database_name);
+
+      // Dit is de sql-query die alle records uit de users tabel selecteerd
+      $sql = "SELECT * FROM `users`";
+
+      // We vuren de query af op de mysql-database via de verbinding $conn
+      $result = mysqli_query($conn, $sql);
+
+      // We laten PHP het onleesbare $result object omzetten naar een zeer leesbaar associatief array
+        
+      $table_data = "";
+      while ($record = mysqli_fetch_assoc($result)) {
+        $table_data = $table_data . "<tr>
+                                        <td>" . $record["id"]  . "</td>
+                                        <td>" . $record["voornaam"]  . "</td>
+                                        <td>" . $record["tussenvoegsel"]  . "</td>
+                                     </tr>";
+      }
+
+
+
+
+
     ?>
 
     <article class="container">
@@ -113,27 +147,9 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>Arjan</td>
-              <td>de</td>
-              <td>Ruijter</td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Bert</td>
-              <td>de</td>
-              <td>Vries</td>
-              <td>4</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Johan</td>
-              <td>de</td>
-              <td>Beer</td>
-              <td>112</td>
-            </tr>
+            
+            <?php echo $table_data; ?>
+
           </tbody>
         </table>
     </article>
