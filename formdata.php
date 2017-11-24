@@ -51,11 +51,11 @@
   
   echo "<h1>Gefeliciteerd, de gegevens zijn weggeschreven naar de database-tabel!</h1>";
   // Wil je direct doorgestuurd worden naar de index.php pagina dan gebruik je... 
-  //header("Location: ./index.php");
+  header("Location: ./index.php");
 
   // Wil je doorgestuurd worden naar index.php maar toch een aantal seconden op de
   // pagina blijven dan gebruik je... 
-  header("Refresh: 2; url=./index.php");
+  //header("Refresh: 2; url=./index.php");
  
   
 ?>

@@ -86,6 +86,8 @@
                                         <td>" . $record["id"]  . "</td>
                                         <td>" . $record["voornaam"]  . "</td>
                                         <td>" . $record["tussenvoegsel"]  . "</td>
+                                        <td>" . $record["achternaam"]  . "</td>
+                                        <td>" . $record["leeftijd"]  . "</td>
                                      </tr>";
       }
     ?>
