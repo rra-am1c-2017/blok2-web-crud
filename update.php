@@ -43,7 +43,12 @@
             <div class="form-group row">
               <label for="input_voornaam" class="col-sm-2 col-form-label">Voornaam</label>
               <div class="col-sm-10">
-                <input type="text" name="voornaam" class="form-control" id="input_voornaam" placeholder="vul in voornaam">
+                <input type="text" 
+                       name="voornaam" 
+                       class="form-control" 
+                       id="input_voornaam" 
+                       placeholder="vul in voornaam"
+                       value="<?php echo $record["voornaam"]; ?>">
               </div>
             </div>
             <div class="form-group row">
