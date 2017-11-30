@@ -90,6 +90,10 @@
                                         <td>" . $record["leeftijd"]  . "</td>
                                      </tr>";
       }
+
+      echo "geheim" . "<br>";
+      echo MD5("geheim") . "<br>";
+      echo sha1("geheim")
     ?>
     
     

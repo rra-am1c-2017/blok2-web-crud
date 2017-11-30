@@ -59,3 +59,8 @@
  
   
 ?>
+
+
+Opdracht:
+
+Bedenk een tweetal extra velden in je database en zorg dat je ze kunt invoeren in het formulier en dat ze zichtbaar zijn in de tabel
