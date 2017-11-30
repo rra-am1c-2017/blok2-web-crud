@@ -88,12 +88,16 @@
                                         <td>" . $record["tussenvoegsel"]  . "</td>
                                         <td>" . $record["achternaam"]  . "</td>
                                         <td>" . $record["leeftijd"]  . "</td>
+                                        <td>
+                                          <a href='./update.php?id=" . $record["id"] . "'>
+                                            <img src='./images/edit.png' alt='wijzig'>
+                                          </a>  
+                                        </td>
+                                        <td>
+                                          <img src='./images/drop.png' alt='wijzig'>
+                                        </td>
                                      </tr>";
       }
-
-      echo "geheim" . "<br>";
-      echo MD5("geheim") . "<br>";
-      echo sha1("geheim")
     ?>
     
     
@@ -147,6 +151,8 @@
               <th>tussenvoegsel</th>
               <th>achternaam</th>
               <th>leeftijd</th>
+              <th></th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
