@@ -1,22 +1,23 @@
 <?php
   var_dump($_POST);
+  // De logingegevens voor de mysql-database
+  $server_name = "localhost";
+  $user_name = "root";
+  $password = "";
+  $database_name = "am1c_2017_blok2_crud";
 
-  // Stap 1) Maak contact met database
+  // We maken contact met de mysql-server
+  $conn = mysqli_connect($server_name, $user_name, $password, $database_name);
 
+  // Dit is de sql-query die alle records uit de users tabel selecteert
+  $sql = "UPDATE `users` SET `voornaam`       = '" . $_POST["voornaam"] . "',
+                             `tussenvoegsel`  = '" . $_POST["tussenvoegsel"] . "', 
+                             `achternaam`     = '" . $_POST["achternaam"] . "', 
+                             `leeftijd`       = '" . $_POST["leeftijd"] . "' 
+                       WHERE `id`             =  " . $_POST['id'];
 
-  // Stap 2) Maak een update query... 
+  // We vuren de query af op de mysql-database via de verbinding $conn
+  $result = mysqli_query($conn, $sql);
 
-  
-// UPDATE `users` SET `voornaam` = 'Arjan',
-//                    `tussenvoegsel` = 'den', 
-//                    `achternaam` = 'Gruijter', 
-//                    `leeftijd` = '59' 
-//              WHERE `id` = 1;
-
-  // Stap 3) Vuur de query af op de database
-
-
-  // Stap 4) Stuur met header("Location: ....") de gebruiker terug naar index.php
-
-
+  header("Location: ./index.php");
 ?>

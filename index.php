@@ -73,7 +73,7 @@
       // We maken contact met de mysql-server
       $conn = mysqli_connect($server_name, $user_name, $password, $database_name);
 
-      // Dit is de sql-query die alle records uit de users tabel selecteerd
+      // Dit is de sql-query die alle records uit de users tabel selecteert
       $sql = "SELECT * FROM `users`";
 
       // We vuren de query af op de mysql-database via de verbinding $conn
