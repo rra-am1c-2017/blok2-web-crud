@@ -1,5 +1,5 @@
 <?php
-  echo "Het meegegeven id is: " . $_GET["id"];
+  // echo "Het meegegeven id is: " . $_GET["id"];
 
   // De logingegevens voor de mysql-database
   $server_name = "localhost";
@@ -18,7 +18,7 @@
 
   $record = mysqli_fetch_assoc($result);
 
-  var_dump($record);
+  // var_dump($record);
 ?>
 
 <!doctype html>
@@ -39,7 +39,7 @@
         <div class="col-2"></div>
         <div class="col-8">
           <h3>Registratieformulier</h3>
-          <form action="./formdata.php" method="post">
+          <form action="./update_code.php" method="post">
             <div class="form-group row">
               <label for="input_voornaam" class="col-sm-2 col-form-label">Voornaam</label>
               <div class="col-sm-10">
@@ -54,21 +54,39 @@
             <div class="form-group row">
               <label for="input_tussenvoegsel" class="col-sm-2 col-form-label">Tussenvoegsel</label>
               <div class="col-sm-10">
-                <input type="text" name="tussenvoegsel" class="form-control" id="input_tussenvoegsel" placeholder="vul in tussenvoegsel">
+                <input type="text" 
+                       name="tussenvoegsel" 
+                       class="form-control" 
+                       id="input_tussenvoegsel" 
+                       placeholder="vul in tussenvoegsel"
+                       value="<?php echo $record['tussenvoegsel']; ?>">
               </div>
             </div>
             <div class="form-group row">
               <label for="input_achternaam" class="col-sm-2 col-form-label">Achternaam</label>
               <div class="col-sm-10">
-                <input type="text" name="achternaam" class="form-control" id="input_achternaam" placeholder="vul in achternaam">
+                <input type="text" 
+                       name="achternaam" 
+                       class="form-control" 
+                       id="input_achternaam" 
+                       placeholder="vul in achternaam"
+                       value="<?php echo $record['achternaam']; ?>">
               </div>
             </div>
             <div class="form-group row">
               <label for="input_leeftijd" class="col-sm-2 col-form-label">Leeftijd</label>
               <div class="col-sm-10">
-                <input type="number" min=0 max=255 name="leeftijd" class="form-control" id="input_leeftijd">
+                <input type="number" 
+                       min=0 max=255 
+                       name="leeftijd" 
+                       class="form-control" 
+                       id="input_leeftijd"
+                       value="<?php echo $record['leeftijd']; ?>">
               </div>
             </div>
+
+            <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
+
             <div class="form-group row">
               <div class="col-sm-10">
                 <button type="submit" class="btn btn-primary">Verstuur!</button>
