@@ -1,16 +1,20 @@
 <?php
-  // Maak contact met de database en server
-  include("./db_connect.php");
+  if (is_numeric($_GET["id"])) {
+    // Maak contact met de database en server
+    include("./db_connect.php");
 
-  // Dit is de sql-query die alle records uit de users tabel selecteerd
-  $sql = "SELECT * FROM `users` WHERE `id` = " . $_GET["id"];
+    // Dit is de sql-query die alle records uit de users tabel selecteerd
+    $sql = "SELECT * FROM `users` WHERE `id` = " . $_GET["id"];
 
-  // We vuren de query af op de mysql-database via de verbinding $conn
-  $result = mysqli_query($conn, $sql);
+    // We vuren de query af op de mysql-database via de verbinding $conn
+    $result = mysqli_query($conn, $sql);
 
-  $record = mysqli_fetch_assoc($result);
+    $record = mysqli_fetch_assoc($result);
 
-  // var_dump($record);
+    // var_dump($record);
+  } else {
+    header("Location: ./index.php");
+  }
 ?>
 
 <!doctype html>
