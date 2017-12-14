@@ -1,19 +1,6 @@
 <?php
-  /* echo "Dit is de pagina formdata.php";
-     var_dump($_POST);
-     //echo "Mijn naam is: {$_POST["voornaam"]} {$_POST["tussenvoegsel"]} {$_POST["achternaam"]}";
-     echo "<p>Mijn naam is: " . $_POST["voornaam"] . " " . $_POST["tussenvoegsel"]. " " . $_POST["achternaam"] . "</p>";
-     //echo "Mijn wachtwoord is: {$_POST["password"]}";
-     echo "<p>Mijn wachtwoord is: " . $_POST["password"] . "</p>";
- */
-  // De logingegevens voor de mysql-database
-  $server_name = "localhost";
-  $user_name = "root";
-  $password = "";
-  $database_name = "am1c_2017_blok2_crud";
-
-  // We maken contact met de mysql-server
-  $conn = mysqli_connect($server_name, $user_name, $password, $database_name);
+  //   Maak contact met de database en server
+  include("./db_connect.php");
 
   // We maken onze query voor het inserten van de formuliergegevens.
   $sql = "INSERT INTO `users` (`id`,

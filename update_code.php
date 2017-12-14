@@ -1,13 +1,6 @@
 <?php
-  var_dump($_POST);
-  // De logingegevens voor de mysql-database
-  $server_name = "localhost";
-  $user_name = "root";
-  $password = "";
-  $database_name = "am1c_2017_blok2_crud";
-
-  // We maken contact met de mysql-server
-  $conn = mysqli_connect($server_name, $user_name, $password, $database_name);
+  // Maak contact met de database en server
+  include("./db_connect.php");
 
   // Dit is de sql-query die alle records uit de users tabel selecteert
   $sql = "UPDATE `users` SET `voornaam`       = '" . $_POST["voornaam"] . "',
