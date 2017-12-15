@@ -1,6 +1,13 @@
 <?php
   //   Maak contact met de database en server
   include("./db_connect.php");
+  include("./functions/sanitize.php");
+
+  // We maken de vieze $_POST waarden schoon
+  $voornaam = sanitize($_POST["voornaam"]);
+  $tussenvoegsel = sanitize($_POST["tussenvoegsel"]);
+  $achternaam = sanitize($_POST["achternaam"]);
+  $leeftijd = sanitize($_POST["leeftijd"]);
 
   // We maken onze query voor het inserten van de formuliergegevens.
   $sql = "INSERT INTO `users` (`id`,
@@ -9,12 +16,12 @@
                               `achternaam`,
                               `leeftijd`)
           VALUES              (NULL,
-                              '" . $_POST["voornaam"] . "',
-                              '" . $_POST["tussenvoegsel"] . "',
-                              '" . $_POST["achternaam"] . "',
-                              '" . $_POST["leeftijd"] ."')";
+                              '" . $voornaam . "',
+                              '" . $tussenvoegsel . "',
+                              '" . $achternaam . "',
+                              '" . $leeftijd . ")";
 
-  //echo $sql;
+  //echo $sql; exit();
   /* Opdracht
       Maak minimaal de volgende velden in je formulier en database en zorg dat je 
       deze gegevens kunt wegschrijven naar de tabel
